@@ -37,6 +37,7 @@ def processData(data):
     try:
         response = client.recognize(config=config, audio=audio)
         for result in response.results:
+            print('transcript: ', result.alternatives)
             emit('transcript', result.alternatives[0].transcript)
     except RetryError as e:
         print("Error: {0}".format(e))

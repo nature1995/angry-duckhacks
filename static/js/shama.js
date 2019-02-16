@@ -23,6 +23,7 @@ $( document ).ready( function () {
     } );
 
     socket.on( 'transcript', function ( data ) {
+      console.log('data: ', data);
       $( '.recognized-text' ).html( data );
     } );
   };
@@ -33,10 +34,11 @@ $( document ).ready( function () {
         recorder.exportWAV( function ( blob ) {
           recorder.clear();
           if ( 'undefined' !== typeof socket ) {
+            console.log("blob: ", blob);
             socket.emit( 'stream', blob );
           }
         } );
-      }, 1000 );
+      }, 5000 );
     }
   };
 
