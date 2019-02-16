@@ -24,7 +24,7 @@ $( document ).ready( function () {
 
     socket.on( 'transcript', function ( data ) {
       console.log('data: ', data);
-      $( '.recognized-text' ).html( data );
+      $( '.recognized-text' ).append( ' ' + data );
     } );
   };
 
