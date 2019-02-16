@@ -1,38 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "theme.html" %}
+    {% block style %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-<head>
-  <title>Shama</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
-  <script type="text/javascript" src="../static/js/jquery.min.js"></script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
-  <script type="text/javascript" src="../static/js/recorder.js"></script>
-  <script type="text/javascript" src="../static/js/shama.js?v=1.0.1"></script>
-</head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta16/shoelace.css">
+        <link rel="stylesheet" href="../static/css/styles.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+        <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+        <script type="text/javascript" src="../static/js/recorder.js"></script>
+        <script type="text/javascript" src="../static/js/shama.js?v=1.0.1"></script>
+        <style>
+          .col-center-block {
+            float: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .img-responsive {
+            display: block;
+            height: auto;
+            max-width: 100%;
+        }
+        </style>
+    {% endblock style %}
+  {% block content %}
+    <div class="container">
 
-<body>
-  <div class="container">
-    <div class="header">
-      <h3 class="text-muted">Shama</h3>
-      <p>
-        Hear intelligently...
-      </p>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="jumbotron">
-          <p class="text-center">
-            <a class="recorder btn btn-lg btn-success" role="button">Start Recording</a>
+      <h1>Angry Duck</h1>
+      <p class="page-description">Speech Sentiment Text Recorder</p>
+
+      <div class="app">
+          <h3>Add new note</h3>
+          <div>
+            <textarea class="recognized-text" id="note-textarea" placeholder="Create new notes by voice or keyboard input..." rows="6"></textarea>
+          </div>
+          <p class="img-responsive">
+          <a class="recorder btn btn-lg btn-info text-white" role="button">Start Recording</a>
           </p>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="recognized-text">
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
+          <button id="save-note-btn" title="Save Note">Save Note</button>
+          <p id="recording-instructions">Press <strong>Start Recording </strong>the button and follow the prompts to give permission</p>
 
-</html>
+          <h3>History</h3>
+          <ul id="notes">
+              <li>
+                  <p class="no-notes">None</p>
+              </li>
+          </ul>
+
+      </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  {% endblock content %}
+    <body>
+
+
+    </body>
+
+
+

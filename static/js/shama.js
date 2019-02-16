@@ -36,7 +36,7 @@ $( document ).ready( function () {
             socket.emit( 'stream', blob );
           }
         } );
-      }, 5000 );
+      }, 1000 );
     }
   };
 
