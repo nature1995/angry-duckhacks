@@ -4,10 +4,11 @@ from google.cloud.language import enums
 from google.cloud.language import types
 from google.oauth2 import service_account
 import sys
+import setting
 
 def detect_sentiment(text):
     credentials = service_account.Credentials.from_service_account_file(
-    'google-api.json')
+    setting.GOOGLE_API)
     credentials = credentials.with_scopes(
         ['https://www.googleapis.com/auth/cloud-platform'])
     client = language.LanguageServiceClient(credentials=credentials)

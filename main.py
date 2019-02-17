@@ -13,14 +13,14 @@ from flask import Flask, render_template, request, jsonify
 from flask_socketio import SocketIO, emit
 
 from sentiment import detect_sentiment
-
+import setting
 app = Flask(__name__)
 
 socketio = SocketIO(app)
 
 # credentials, project = google.auth.default()
 credentials = service_account.Credentials.from_service_account_file(
-    'google-api.json')
+    setting.GOOGLE_API)
 credentials = credentials.with_scopes(
     ['https://www.googleapis.com/auth/cloud-platform'])
 

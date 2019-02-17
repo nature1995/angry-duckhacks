@@ -4,6 +4,7 @@ $( document ).ready( function () {
   shama.init = function () {
     shama.createWebSocket();
     shama.initRecordButton();
+    shama.initSentimentButtom();
   };
 
   shama.getRecorder = function ( s ) {
@@ -79,5 +80,23 @@ $( document ).ready( function () {
     } );
   };
 
+  shama.initSentimentButtom = function(){
+     $( '.sentiment' ).click( function ( e ) {
+      e.preventDefault();
+      //log
+      console.log($(this))
+      var reconginized_text =  $( '.recognized-text' ).val();
+      //log
+      console.log( $( '.recognized-text' ).val())
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", '/sentiment?data=' + reconginized_text, true);
+      xhr.send();
+      console.log(xhr.responseText);
+
+    } );
+  };
+
   $( shama.init() );
 } );
+
+

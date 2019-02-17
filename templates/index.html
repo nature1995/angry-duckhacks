@@ -14,7 +14,6 @@
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
       <script type="text/javascript" src="../static/js/recorder.js"></script>
       <script type="text/javascript" src="../static/js/shama.js?v=1.0.1"></script>
-      <script src="../static/js/script.js"></script>
       <style>
         .col-center-block {
           float: none;
@@ -22,7 +21,7 @@
           margin-left: auto;
           margin-right: auto;
         }
-        .img-responsive {
+        .center-responsive {
           display: block;
           height: auto;
           max-width: 100%;
@@ -31,7 +30,7 @@
   {% endblock style %}
 
   {% block content %}
-    <div class="container">
+    <div id="app" class="container">
 
       <h1>Angry Ducks</h1>
       <p class="page-description">Speech Sentiment Text Recorder</p>
@@ -41,21 +40,32 @@
           <div>
             <textarea class="recognized-text" id="note-textarea" placeholder="Create new notes by voice or keyboard input..." rows="6"></textarea>
           </div>
-          <p class="img-responsive">
-          <a class="recorder btn btn-lg btn-info text-white" role="button">Start Recording</a>
-          </p>
-          <button id="save-note-btn" title="Save Note">Save Note</button>
-          <p id="recording-instructions">Press <strong>Start Recording </strong>the button and follow the prompts to give permission</p>
 
+          <p class="center-responsive">
+            <a class="recorder btn btn-lg btn-info text-white" role="button">Start Recording</a>
+          </p>
+          <p class="center-responsive">
+            <a class="sentiment btn btn-lg btn-warning text-white" @click="submit" role="button">Sentiment Now</a>
+          </p>
+
+          <div>
+            <button id="save-note-btn" title="Save Note">Save Note</button>
+          </div>
+          <p id="recording-instructions">Press <strong>Start Recording </strong>the button and follow the prompts to give permission</p>
+          <span id="showsentiment"></span>
           <h3>History</h3>
           <ul id="notes">
               <li>
                   <p class="no-notes">None</p>
               </li>
           </ul>
-      </div>
+    </div>
     </div>
     {% endblock content %}
+
+  {% block scripts %}
+
+  {% endblock scripts %}
 
 
 
