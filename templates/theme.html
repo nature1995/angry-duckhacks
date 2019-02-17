@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Angry Ducks | Speech Sentiment Text Recorder">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Ziran Gong Team">
+    <meta name="author" content="Ziran Gong's Team">
     <link rel="icon" href="{{ url_for('static',filename='images/favicon.ico')}}">
 
-    <title>Angry Ducks | Speech Sentiment Text Recorder</title>
+    <title>Angry Ducks | A speech sentiment text recorder</title>
 
 
     {% block style %}
@@ -20,64 +20,37 @@
   </head>
 
   <body>
-   <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">
-          <img  src="{{ url_for('static',filename='images/logo0.png')}}" style="height: 3.8rem" />
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container pt-0 pb-1">
+    <a class="navbar-brand" href="#">
+    <img  src="{{ url_for('static',filename='images/logo0.png')}}" style="height: 3.8rem" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+      <ul class="navbar-nav justify-content-end container-fluid">
+          </li>
+          <li class="nav-item text-right">
+           <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="d-block d-md-none border-top border-top-1"></li>
+          <li class="nav-item dropdown text-right">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          About
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-        <div class="collapse navbar-collapse " id="navbarNavDropdown">
-          <ul class="navbar-nav justify-content-end container-fluid p-0 mt-2 mt-md-0">
-              <li class="nav-item text-right">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
+          <div class="dropdown-menu text-right" aria-labelledby="navbarDropdownMenuLink">
+                 <a class="dropdown-item" href="https://nature1995.club/about/">Ziran Gong</a>
+                 <a class="dropdown-item" href="https://github.com/zfz">Fangzhou Zhang</a>
+                 <a class="dropdown-item" href="https://github.com/zzdqqqq">Zidong Zhang</a>
+                 <a class="dropdown-item" href="https://github.com/zlaomin">Yuchen Zeng</a>
+          </div>
 
-              <li class="d-block d-md-none border-top border-top-1"></li>
-              <li class="nav-item dropdown text-right">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Article
-              </a>
-              <div class="dropdown-menu text-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="./">Angry Ducks</a>
-              </div>
-              </li>
-
-              <li class="d-block d-md-none border-top border-top-1"></li>
-              <li class="nav-item dropdown text-right">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Resource
-              </a>
-              <div class="dropdown-menu text-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="./">Angry Ducks</a>
-              </div>
-              </li>
-
-              <li class="d-block d-md-none border-top border-top-1"></li>
-              <li class="nav-item dropdown text-right">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Tools
-              </a>
-              <div class="dropdown-menu text-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="./">Angry Ducks</a>
-              </div>
-              </li>
-
-              <li class="d-block d-md-none border-top border-top-1"></li>
-              <li class="nav-item text-right">
-              <a class="nav-link" href="https://nature1995.club/about/">About&nbsp;</a>
-
-              </li>
-
-              <li class="nav-item text-right">
-
-              </li>
-          </ul>
-        </div>
-      </div>
+      </ul>
+    </div>
+    </div>
     </nav>
-  </header>
   <br>
 
   {% block content %}
@@ -85,7 +58,7 @@
   {% endblock content %}
 
     <section id="footer_nav" class="bg-light mt-4">
-    <div class="container pt-3 pb-4">
+    <div class="container pt-0 pb-1">
         <dl class="row mb-0">
             <div class="col-sm">
                 <dt class="mb-1 mt-2">Topics</dt>
@@ -95,9 +68,12 @@
                 </dd>
              </div>
             <div class="col-sm">
-                <dt class="mb-1 mt-2">About Me</dt>
+                <dt class="mb-1 mt-2">About Us</dt>
                 <dd class="mb-0">
-                     <a class="text-dark" href="https://nature1995.club/about/">Ziran Gong&nbsp;</a>
+                     <a class="text-dark" href="https://nature1995.club/about/">Ziran Gong&nbsp;</a><br>
+                     <a class="text-dark" href="https://github.com/zfz">Fangzhou Zhang&nbsp;</a><br>
+                     <a class="text-dark" href="https://github.com/zzdqqqq">Zidong Zhang&nbsp;</a><br>
+                     <a class="text-dark" href="https://github.com/zlaomin">Yuchen Zeng&nbsp;</a>
                 </dd>
             </div>
             <div class="col-sm">
@@ -110,13 +86,10 @@
         </dl>
     </div>
     </section>
-
+<br>
     <footer class="text-muted">
-      <div class="container">
-        <p align="center"> ©2019&nbsp;&nbsp;Angry Ducks</p>
-        <p align="center"> <a align="center" class="text-muted" href="http://www.miitbeian.gov.cn/"> All Rights Reserved.</a>
-        </p>
-      </div>
+        <p align="center"> ©2019&nbsp;&nbsp;Angry Ducks<br>
+        <a align="center" class="text-muted" href="http://www.miitbeian.gov.cn/"> All Rights Reserved.</a></p>
     </footer>
 
     <!-- core JavaScript

@@ -50,9 +50,11 @@ def processData(data):
 def main():
     return render_template('index.html')
 
+
 @socketio.on('stream')
 def handle_stream(blob):
     processData(blob)
+
 
 @app.route('/sentiment', methods=['POST'])
 def get_sentiment():
@@ -63,6 +65,7 @@ def get_sentiment():
     print('sentiment: ', sentiment)
     return jsonify({'score': sentiment.score,
                     'magnitude': sentiment.magnitude})
+
 
 if __name__ == "__main__":
     socketio.run(app, '0.0.0.0')

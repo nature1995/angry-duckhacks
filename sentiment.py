@@ -6,6 +6,7 @@ from google.oauth2 import service_account
 import sys
 import setting
 
+
 def detect_sentiment(text):
     credentials = service_account.Credentials.from_service_account_file(
     setting.GOOGLE_API)
