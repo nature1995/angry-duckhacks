@@ -18,7 +18,7 @@ socketio = SocketIO(app)
 
 # credentials, project = google.auth.default()
 credentials = service_account.Credentials.from_service_account_file(
-    'Shama-1a035578a669.json')
+    'google-api.json')
 credentials = credentials.with_scopes(
     ['https://www.googleapis.com/auth/cloud-platform'])
 
@@ -31,7 +31,6 @@ def processData(data):
 
     config = types.RecognitionConfig(
         encoding=enums.RecognitionConfig.AudioEncoding.LINEAR16,
-        sample_rate_hertz=48000,
         language_code='en-US')
 
     try:
