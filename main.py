@@ -8,9 +8,11 @@ from google.gax.errors import RetryError
 # import google.auth
 from google.oauth2 import service_account
 
-from flask import Flask, render_template, request, json
+from flask import Flask, render_template, request, jsonify
 
 from flask_socketio import SocketIO, emit
+
+from sentiment import detect_sentiment
 
 app = Flask(__name__)
 
@@ -51,6 +53,16 @@ def main():
 @socketio.on('stream')
 def handle_stream(blob):
     processData(blob)
+
+@app.route('/sentiment', methods=['POST'])
+def get_sentiment():
+    print(request.args)
+    recognized_text = request.args.get('data')
+    print('recognized_text: ', recognized_text)
+    sentiment =  detect_sentiment(recognized_text)
+    print('sentiment: ', sentiment)
+    return jsonify({'score': sentiment.score,
+                    'magnitude': sentiment.magnitude})
 
 if __name__ == "__main__":
     socketio.run(app, '0.0.0.0')
