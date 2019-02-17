@@ -1,7 +1,7 @@
 $( document ).ready( function () {
-  document.getElementById("happy-img").style.visibility="hidden";
-  document.getElementById("angry-img").style.visibility="hidden";
-  document.getElementById("neu-img").style.visibility="hidden";
+  // document.getElementById("happy-img").style.visibility="hidden";
+  // document.getElementById("angry-img").style.visibility="hidden";
+  // document.getElementById("neu-img").style.visibility="hidden";
   var shama = {};
 
   shama.init = function () {
@@ -103,17 +103,17 @@ $( document ).ready( function () {
         .then( function(res) {
           console.log(typeof res);
           if (parseFloat(res.score) > 0.0) {
-            document.getElementById("happy-img").style.visibility="visible";
-            document.getElementById("angry-img").style.visibility="hidden";
-            document.getElementById("neu-img").style.visibility="hidden";
+            document.getElementById("duck-img").src="./static/images/happy.png";
+            // document.getElementById("angry-img").style.visibility="hidden";
+            // document.getElementById("neu-img").style.visibility="hidden";
           } else if (parseFloat(res.score) < 0.0) {
-            document.getElementById("angry-img").style.visibility="visible";
-            document.getElementById("happy-img").style.visibility="hidden";
-            document.getElementById("neu-img").style.visibility="hidden";
+            document.getElementById("duck-img").src="./static/images/angry.png";
+            // document.getElementById("happy-img").style.visibility="hidden";
+            // document.getElementById("neu-img").style.visibility="hidden";
           } else if (parseFloat(res.score) == 0.0) {
-            document.getElementById("angry-img").style.visibility="hidden";
-            document.getElementById("happy-img").style.visibility="hidden";
-            document.getElementById("neu-img").style.visibility="visible";
+            // document.getElementById("angry-img").style.visibility="hidden";
+            // document.getElementById("happy-img").style.visibility="hidden";
+            document.getElementById("duck-img").src="./static/images/neu.png";
           }
         });
     });
