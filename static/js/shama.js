@@ -1,4 +1,7 @@
 $( document ).ready( function () {
+  document.getElementById("happy-img").style.visibility="hidden";
+  document.getElementById("angry-img").style.visibility="hidden";
+  document.getElementById("neu-img").style.visibility="hidden";
   var shama = {};
 
   shama.init = function () {
@@ -81,19 +84,39 @@ $( document ).ready( function () {
   };
 
   shama.initSentimentButtom = function(){
-     $( '.sentiment' ).click( function ( e ) {
+    $( '.sentiment' ).click( function ( e ) {
       e.preventDefault();
       //log
       console.log($(this))
       var reconginized_text =  $( '.recognized-text' ).val();
-      //log
-      console.log( $( '.recognized-text' ).val())
       var xhr = new XMLHttpRequest();
-      xhr.open("POST", '/sentiment?data=' + reconginized_text, true);
-      xhr.send();
-      console.log(xhr.responseText);
-
-    } );
+      //log
+      console.log( $( '.recognized-text' ).val());
+      // xhr.open("POST", '/sentiment?data=' + reconginized_text, true);
+      // xhr.send().then(function() {
+      //   console.log('sentiment1: ', xhr.response);
+      // });
+      // console.log('sentiment: ', xhr.response)
+      const url = "/sentiment?data=" + reconginized_text;
+      fetch(url, {method: 'POST'})
+        .then( response => response.json())
+        .then( function(res) {
+          console.log(typeof res);
+          if (parseFloat(res.score) > 0.0) {
+            document.getElementById("happy-img").style.visibility="visible";
+            document.getElementById("angry-img").style.visibility="hidden";
+            document.getElementById("neu-img").style.visibility="hidden";
+          } else if (parseFloat(res.score) < 0.0) {
+            document.getElementById("angry-img").style.visibility="visible";
+            document.getElementById("happy-img").style.visibility="hidden";
+            document.getElementById("neu-img").style.visibility="hidden";
+          } else if (parseFloat(res.score) == 0.0) {
+            document.getElementById("angry-img").style.visibility="hidden";
+            document.getElementById("happy-img").style.visibility="hidden";
+            document.getElementById("neu-img").style.visibility="visible";
+          }
+        });
+    });
   };
 
   $( shama.init() );
