@@ -9,7 +9,7 @@
 
 If you appreciate the content, support projects, give star!
 
-English| [中文](https://github.com/nature1995/angry-duckhacks/blob/dev/README.cn.md)
+English| [中文](https://github.com/nature1995/angry-duckhacks/blob/master/README.cn.md)
 
 ## Introduction  
 Nowadays, the society has become more and more extensive in international culture, and English has become a bridge for communication between people all over the world. But even if it is a language, people who are not native speakers of English may have different understandings of the language. The result is a bias in emotional understanding. 

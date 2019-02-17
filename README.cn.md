@@ -7,9 +7,9 @@
 
 **DuckHacks 2019 at Stevens Institute of Technology** 
 
-如果您觉得内容不错📖，请支持本项目，欢迎给予 👍| ⭐|👏|🔥🔥🔥
+如果您觉得内容不错，请支持本项目，欢迎给予Star.
 
-[English](https://github.com/nature1995/angry-duckhacks/blob/dev/README.md) | 中文
+[English](https://github.com/nature1995/angry-duckhacks/blob/master/README.md) | 中文
 
 ## 简介
 
