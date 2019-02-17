@@ -6,7 +6,7 @@
 
 If you appreciate the content 📖, support projects visibility, give 👍| ⭐|👏|🔥🔥🔥
 
-[English](https://github.com/nature1995/angry-duckhacks/raw/master/README.md) | 中文
+[English](https://github.com/nature1995/angry-duckhacks/blob/dev/README.md) | 中文
 
 ## 简介
 

@@ -2,11 +2,13 @@
 
 [![License](https://img.shields.io/badge/license-GPL--3.0-green.svg)](https://github.com/nature1995/image-classify-django-server/blob/master/LICENSE)
 
+![red_duck.png](https://i.loli.net/2019/02/17/5c69796b1d571.png)
+
 **DuckHacks 2019 at Stevens Institute of Technology** 
 
 If you appreciate the content 📖, support projects visibility, give 👍| ⭐|👏|🔥🔥🔥
 
-English| [中文](https://github.com/nature1995/angry-duckhacks/raw/master/README.cn.md)
+English| [中文](https://github.com/nature1995/angry-duckhacks/blob/dev/README.cn.md)
 
 ## Introduction  
 Nowadays, the society has become more and more extensive in international culture, and English has become a bridge for communication between people all over the world. But even if it is a language, people who are not native speakers of English may have different understandings of the language. The result is a bias in emotional understanding. 
