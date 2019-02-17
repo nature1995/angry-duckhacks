@@ -29,6 +29,10 @@ This is a lightweight web service access program that allows you to directly tra
 - [x] Add feature: Identify sentiment
 - [x] Add feature: Record speech text
 - [x] Make real time speech, text, sentiment identification. 
+- [x] Run Angry-Ducks on the Google Cloud Server
+
+## Demo
+http://35.237.242.184:5000
 
 ## Run the code:  
 1. Clone this repository:
