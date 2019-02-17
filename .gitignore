@@ -1,5 +1,8 @@
 # Created by https://www.gitignore.io/api/macos,flask,python
 # Edit at https://www.gitignore.io/?templates=macos,flask,python
+#
+
+*.json
 
 ### Flask ###
 instance/*
@@ -204,3 +207,4 @@ Temporary Items
 .venv/
 
 # End of https://www.gitignore.io/api/macos,flask,python
+\.idea/
