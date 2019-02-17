@@ -2,25 +2,25 @@ $( document ).ready( function () {
   // document.getElementById("happy-img").style.visibility="hidden";
   // document.getElementById("angry-img").style.visibility="hidden";
   // document.getElementById("neu-img").style.visibility="hidden";
-  var shama = {};
+  var aduck = {};
 
-  shama.init = function () {
-    shama.createWebSocket();
-    shama.initRecordButton();
-    shama.initSentimentButtom();
+  aduck.init = function () {
+    aduck.createWebSocket();
+    aduck.initRecordButton();
+    aduck.initSentimentButtom();
   };
 
-  shama.getRecorder = function ( s ) {
+  aduck.getRecorder = function ( s ) {
     context = new AudioContext();
     source = context.createMediaStreamSource( s );
     recorder = new Recorder( source, {
       numChannels: 1,
     } );
     recorder.record();
-    shama.setInterval();
+    aduck.setInterval();
   };
 
-  shama.createWebSocket = function () {
+  aduck.createWebSocket = function () {
     socket = io.connect( '//' + document.domain + ':' + location.port );
     socket.on( 'connect', function () {
       console.log( 'Connected!' );
@@ -32,7 +32,7 @@ $( document ).ready( function () {
     } );
   };
 
-  shama.setInterval = function () {
+  aduck.setInterval = function () {
     if ( 'undefined' !== typeof recorder ) {
       exportInterval = setInterval( function () {
         recorder.exportWAV( function ( blob ) {
@@ -46,20 +46,20 @@ $( document ).ready( function () {
     }
   };
 
-  shama.clearInterval = function () {
+  aduck.clearInterval = function () {
     clearInterval( exportInterval );
   };
 
-  shama.initRecorder = function () {
+  aduck.initRecorder = function () {
     if ( 'undefined' === typeof recorder ) {
       navigator.mediaDevices.getUserMedia( {
         audio: true,
         video: false
-      } ).then( shama.getRecorder );
+      } ).then( aduck.getRecorder );
     }
   };
 
-  shama.initRecordButton = function () {
+  aduck.initRecordButton = function () {
     $( '.recorder' ).click( function ( e ) {
       e.preventDefault();
 
@@ -68,22 +68,22 @@ $( document ).ready( function () {
         if ( 'undefined' !== typeof recorder ) {
           recorder.stop();
         }
-        shama.clearInterval();
+        aduck.clearInterval();
       }
       else { // Start Recording
         $( this ).addClass( 'active is-recording btn-danger' ).text( 'Stop Recording' );
         if ( 'undefined' !== typeof recorder ) {
           recorder.record();
-          shama.setInterval();
+          aduck.setInterval();
         }
         else {
-          shama.initRecorder();
+          aduck.initRecorder();
         }
       }
     } );
   };
 
-  shama.initSentimentButtom = function(){
+  aduck.initSentimentButtom = function(){
     $( '.sentiment' ).click( function ( e ) {
       e.preventDefault();
       //log
@@ -119,7 +119,7 @@ $( document ).ready( function () {
     });
   };
 
-  $( shama.init() );
+  $( aduck.init() );
 } );
 
 
