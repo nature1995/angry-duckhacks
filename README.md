@@ -1,8 +1,9 @@
 # angry-duckhacks
 
-[![License](https://img.shields.io/badge/license-GPL--3.0-green.svg)](https://github.com/nature1995/image-classify-django-server/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-GPL--3.0-green.svg)]()
 
-![red_duck.png](https://i.loli.net/2019/02/17/5c69796b1d571.png)
+<img src="https://i.loli.net/2019/02/17/5c69796b1d571.png" width="200" hegiht="800"/>
+<br>
 
 **DuckHacks 2019 at Stevens Institute of Technology** 
 
