@@ -1,9 +1,11 @@
 # angry-duckhacks
 
-[![License](https://img.shields.io/badge/license-GPL--3.0-green.svg)](https://github.com/nature1995/angry-duckhacks/blob/master/LICENSE)
-
-<img src="https://i.loli.net/2019/02/17/5c69796b1d571.png" width="200" hegiht="800"/>
+<div align="center">
+    <a href=""><img src="https://i.loli.net/2019/02/19/5c6afe1b0be35.png" width="200" hegiht="200"/></a>
+</div>
 <br>
+
+[![License](https://img.shields.io/badge/license-GPL--3.0-green.svg)](https://github.com/angryducks/angry-ducks/blob/master/LICENSE)
 
 **DuckHacks 2019 at Stevens Institute of Technology** 
 
@@ -21,7 +23,9 @@
 这是一个轻量级web服务访问程序，通过它可以直接进行语言转文字，并进行记录。在记录的同时可以进行情感分析。
 
 ## 架构
-<img src="https://i.loli.net/2019/02/17/5c697080ba3cd.png" width="400" hegiht="800" align=center />
+<div align="center">
+<img src="https://i.loli.net/2019/02/17/5c697080ba3cd.png" width="400" hegiht="800"/>
+</div>
 
 ## 特点  
 - [x]创建Flask Web服务器 
@@ -33,7 +37,10 @@
 - [x]在Google Cloud Server上运行Angry-Ducks
 
 ## Demo
-http://35.237.242.184:5000
+<div align="center">
+<img src="https://i.loli.net/2019/02/19/5c6afef001185.png" height="500"/>
+<img src="https://i.loli.net/2019/02/19/5c6aff8ace255.png" height="500"/>
+</div>
 
 ## 运行:  
 1. 克隆仓库:
@@ -71,10 +78,15 @@ python main.py 0.0.0.0:5000
 ```
 
 ## 作者  
-* [**龚子然**](http://ranxiaolang.com)
-* [**张方舟**](https://github.com/zfz)
-* [**张子栋**](https://github.com/zzdqqqq)
-* [**曾宇晨**](https://github.com/zlaomin)
+1. [nature1995](https://github.com/nature1995) | Ziran Gong
+2. [zfz](https://github.com/zfz) | Fangzhou Zhang
+3. [zzdqqqq](https://github.com/zzdqqqq) | Zidong Zhang
+4. [zlaomin](https://github.com/zlaomin) | Yuchen Zeng
+
+## Organization 
+
+* [Angry Ducks](https://github.com/angryducks): 门前大桥下, 游过一群鸭, 快来, 快来数一数, 二四六七八。
+> **Anyone is welcome to participate and improve: one can go very fast, but a group of people can go further.**
 
 ## License  
-This software is licensed under the GNU General Public License v3.0 License. For more information, read the file [LICENSE](https://github.com/nature1995/angry-duckhacks/blob/master/LICENSE).
+本软件根据GNU通用公共许可证v3.0许可证授权。 有关更多信息，请阅读该文件[LICENSE](https://github.com/nature1995/angry-duckhacks/blob/master/LICENSE).
