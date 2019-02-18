@@ -83,7 +83,7 @@ python main.py 0.0.0.0:5000
 3. [zzdqqqq](https://github.com/zzdqqqq) | Zidong Zhang
 4. [zlaomin](https://github.com/zlaomin) | Yuchen Zeng
 
-## Organization 
+## 组织 
 
 * [Angry Ducks](https://github.com/angryducks): 门前大桥下, 游过一群鸭, 快来, 快来数一数, 二四六七八。
 > **Anyone is welcome to participate and improve: one can go very fast, but a group of people can go further.**
